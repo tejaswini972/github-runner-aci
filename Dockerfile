@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:focal
 
 ARG GH_RUNNER_VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/latest" | jq -r '.tag_name[1:]')
 
