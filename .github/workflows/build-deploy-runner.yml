@@ -50,6 +50,7 @@ jobs:
           resource-group: ${{ env.RESOURCE_GROUP }}
           location: ${{ env.LOCATION }}
           cpu: 2
+          memory: 4
           dns-name-label: mmckeown7rg${{ github.run_number }}
           # List of environment variables for the container. Space-seperated in "key=value" format
           environment-variables: RUNNER_REPOSITORY_URL=${{ env.RUNNER_REPOSITORY_URL }}
