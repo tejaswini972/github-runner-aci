@@ -15,7 +15,7 @@ env:
   IMAGE_NAME: runner
   IMAGE_TAG: ${{ github.run_number }}
   RUNNER_REPOSITORY_URL: https://github.com/tejaswini972/github-runner-aci
-  RESOURCE_GROUP: Tejaswini_Gundapaneni_RG
+  RESOURCE_GROUP: TMO-DEV
   LOCATION: centralindia
   
 
