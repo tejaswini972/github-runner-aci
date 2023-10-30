@@ -1,9 +1,7 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
-ARG GH_RUNNER_VERSION=2.311.0
+ARG GH_RUNNER_VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/latest" | jq -r '.tag_name[1:]')
 
-ENV RUNNER_NAME=""
-ENV GITHUB_TOKEN=""
 ENV RUNNER_WORK_DIRECTORY="_work"
 ENV RUNNER_ALLOW_RUNASROOT=false
 ENV AGENT_TOOLS_DIRECTORY=/opt/hostedtoolcache
