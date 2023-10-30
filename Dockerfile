@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 
-ARG GH_RUNNER_VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/latest" | jq -r '.tag_name[1:]')
+ARG GH_RUNNER_VERSION= curl --silent "https://api.github.com/repos/actions/runner/releases/latest" | jq -r '.tag_name[1:]'
 
 ENV RUNNER_WORK_DIRECTORY="_work"
 ENV RUNNER_ALLOW_RUNASROOT=false
