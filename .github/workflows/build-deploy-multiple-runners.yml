@@ -52,9 +52,9 @@ jobs:
           # Name of the Resource Group in which the Container Instance will be created
           resource-group: ${{ env.RESOURCE_GROUP }}
           location: ${{ env.LOCATION }}
-          cpu: 2
-          memory: 4
-          dns-name-label: mmckeown7rg${{ github.run_number }}
+          cpu: 1
+          memory: 1.5
+          dns-name-label: ${{ matrix.aci-name }}-${{ github.run_number }}
           # List of environment variables for the container. Space-seperated in "key=value" format
           environment-variables: RUNNER_REPOSITORY_URL=${{ env.RUNNER_REPOSITORY_URL }}
           image: ${{ SECRETS.ACR_SERVER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
